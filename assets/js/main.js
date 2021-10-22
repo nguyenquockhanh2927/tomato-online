@@ -1126,6 +1126,20 @@
         });
     }
 
+    function dsPhongOnline() {
+        var wrap  =  $('.sec-hocOnline');
+        if(wrap.length) {
+            if( $(window).width() < 768 ) {
+                $('.page-content').css('z-index', 40);
+            }
+    
+            $('.sec-hocOnline__left .item-btn').on('click', function() {
+                $(this).parent().toggleClass('show-list');
+                $('.')
+            });
+        }
+    }
+
 
     function wowJs() {
         var wow = new WOW({
@@ -1163,6 +1177,7 @@
     mobileQuiz();
     $('[data-toggle="tooltip"]').tooltip();
     popupNotifiWebsite();
+    dsPhongOnline();
 
     $(window).on('load', function() {
         headerJs();
