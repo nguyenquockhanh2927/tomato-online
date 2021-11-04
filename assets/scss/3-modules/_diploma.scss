@@ -1,7 +1,6 @@
 .diploma {
 	position: relative;
-	max-width: 600px;
-	overflow-x: auto;
+	// max-width: 600px;
     background: #faebd7;
 	background-image: url(../img/icon/bg-result.jpg);
     border-radius: 6px;
@@ -12,7 +11,7 @@
 }
 
 .diploma__inner {
-	width: 600px;
+	// width: 600px;
 	padding: 25px 15px;
 }
 
@@ -48,12 +47,45 @@
 	padding: 4px;
 }
 
+.diploma__tableScroll {
+	border: 1px solid #999;
+}
+
 .diploma__table {
 	width: 100%;
+	text-align: center;
+	table-layout: fixed;
+	font-family: $font-heading;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.3;
+	color: #000;
+
+	thead {
+		th {
+			font-size: 14px;
+			padding: 15px 10px;
+			border: 1px solid #999;
+		}
+	}
+
+	.tr-header {
+		text-transform: uppercase;
+	}
+
+	.tr-title {
+		font-size: 13px;
+		
+		td {
+			background-color: #0000001a;
+		}
+	}
 
 	tbody {
 		td {
 			border: 1px solid #999;
+
+			padding: 10px;
 
 			p {
 				margin-bottom: 0;
@@ -109,5 +141,19 @@
 	.f-logo {
 		display: inline-block;
 		max-width: 120px
+	}
+}
+
+@include media-breakpoint-down(lg) {
+	.diploma__tableScroll {
+		display: block;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+	}
+
+	.diploma__table {
+		width: 800px;
 	}
 }
